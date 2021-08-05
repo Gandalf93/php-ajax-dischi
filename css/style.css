@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+
+
+
+h2{
+    color: rgb(27, 90, 209);
+}
+
+h3{
+    color: dodgerblue;
+}
+
+.immagine{
+    width: 200px;
+    height: 200px;
+}
+
+p{
+    font-size: 15px;
+    color: cadetblue;
+}
+
+.riga_scritte{
+    height: 200px;
+}

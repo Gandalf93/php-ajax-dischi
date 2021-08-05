@@ -26,16 +26,34 @@ include "dischi_array.php";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>Dischi php</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
-<div>
-    <?php foreach ($dischi as $disco) { ?>
-        <h2><?php echo $disco['title'] ?></h2>
-        <img src="<?php echo $disco['poster'] ?>" alt="">
-   <?php } ?>
-</div>
+    <div class="container ">   
+        <h1 class="text-center">DISCHI</h1>
+        <div class="d-flex flex-row flex-wrap">
+            
+            <?php foreach ($dischi as $disco) { ?>
+                <div class="col-2 m-3">
+                    <div class="row mb-1 mt-5 riga_scritte">
+                        <div class="col">
+                            <h2><?php echo $disco['title'] ?></h2>
+                            <h3><?php echo $disco['author'] ?></h3>
+                            
+                        </div>
+                    </div>
+                     <div class="row mb-3">
+                     <img  class="immagine" src="<?php echo $disco['poster'] ?>" alt="">
+                     <p><?php echo $disco['year'] ?></p>
+                     </div>   
+                    
+                    
+                </div>
+        <?php } ?>
+        </div>
+    </div>
 
 </body>
 </html>
